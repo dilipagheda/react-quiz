@@ -14,7 +14,7 @@ try {
 }
 
 let fs = require('fs');
-let quiz_data = require('../../quiz_data.json')
+let quizData = require('../../quiz_data.json')
 
 describe('QuizQuestionButton Component', () => {
   it('displays correct button text @quiz-question-button-component-displays-button-text', () => {
@@ -35,6 +35,6 @@ describe('QuizQuestionButton Component', () => {
 
     assert(div.querySelector('li button') != null, "no li button")
     let button_contents = div.querySelectorAll('li button')[0]
-    assert(button_contents.innerHTML == quiz_data.quiz_questions[0].answer_options[0], "You're not displaying the correct data from the `button_text` prop in the QuizQuestionButton component's JSX.")
+    assert(button_contents.innerHTML == quizData.quiz_questions[0].answer_options[0], "You're not displaying the correct data from the `button_text` prop in the QuizQuestionButton component's JSX.")
   })
 })

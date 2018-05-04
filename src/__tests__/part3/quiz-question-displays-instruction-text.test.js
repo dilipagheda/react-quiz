@@ -23,7 +23,7 @@ try {
 }
 
 let fs = require('fs');
-let quiz_data = require('../../quiz_data.json')
+let quizData = require('../../quiz_data.json')
 
 describe('QuizQuestion Component', () => {
   it('displays correct instruction text @quiz-question-displays-instruction-text', () => {
@@ -49,6 +49,6 @@ describe('QuizQuestion Component', () => {
     assert(div.querySelector('main') != null, "no main")
     assert(div.querySelectorAll('main section p').length != 0, "We can't find a paragraph tag inside of the first section tag in the QuizQuestion component's JSX.")
     let p_contents = div.querySelectorAll('main section p')[0]
-    assert(p_contents.innerHTML == quiz_data.quiz_questions[0].instruction_text, "You're not displaying the correct data from the `quiz_question` prop in the QuizQuestion component's JSX.")
+    assert(p_contents.innerHTML == quizData.quiz_questions[0].instruction_text, "You're not displaying the correct data from the `quiz_question` prop in the QuizQuestion component's JSX.")
   })
 })

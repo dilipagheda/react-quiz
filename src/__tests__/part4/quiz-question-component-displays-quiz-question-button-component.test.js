@@ -23,7 +23,6 @@ try {
 }
 
 let fs = require('fs');
-let quiz_data = require('../../quiz_data.json')
 
 describe('QuizQuestion Component', () => {
   it('renders QuizQuestionButton component @quiz-question-component-displays-quiz-question-button-component', () => {

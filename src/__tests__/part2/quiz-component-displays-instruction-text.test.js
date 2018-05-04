@@ -14,7 +14,7 @@ try {
 }
 
 let fs = require('fs');
-let quiz_data = require('../../quiz_data.json')
+let quizData = require('../../quiz_data.json')
 
 describe('Quiz Component', () => {
   it('displays the instruction text from JSON data @quiz-component-displays-instruction-text', () => {
@@ -28,7 +28,7 @@ describe('Quiz Component', () => {
     }
 
     if (quiz.find('.QuizQuestion').length > 0) {
-      assert(quiz.find('.QuizQuestion').text() == quiz_data.quiz_questions[0].instruction_text, "The div with a className of `QuizQuestion` isn't displaying the correct instruction text.")
+      assert(quiz.find('.QuizQuestion').text() == quizData.quiz_questions[0].instruction_text, "The div with a className of `QuizQuestion` isn't displaying the correct instruction text.")
     } else {
       assert(false, "There is not a div with a className of QuizQuestion yet.")
     }

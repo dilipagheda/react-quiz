@@ -23,7 +23,7 @@ try {
 }
 
 let fs = require('fs');
-let quiz_data = require('../../quiz_data.json')
+let quizData = require('../../quiz_data.json')
 
 describe('Quiz Component', () => {
   it('has QuizQuestion component with correct prop @@quiz-question-component-has-quiz-question-prop', () => {
@@ -39,6 +39,6 @@ describe('Quiz Component', () => {
 
     assert(quiz.find('QuizQuestion').length == 1, "We couldn't find the QuizQuestion component being loaded by the Quiz component")
     assert(quiz.find('QuizQuestion').props().quiz_question != null, "The QuizQuestion component exists, but there's no prop named `quiz_question`.")
-    assert(quiz.find('QuizQuestion').props().quiz_question == quiz_data.quiz_questions[0], "The QuizQuestion component has a prop named `quiz_question`, but it doesn't contain the correct value.")
+    assert(quiz.find('QuizQuestion').props().quiz_question == quizData.quiz_questions[0], "The QuizQuestion component has a prop named `quiz_question`, but it doesn't contain the correct value.")
   })
 })

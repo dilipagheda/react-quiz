@@ -15,7 +15,7 @@ try {
 }
 
 let fs = require('fs');
-let quiz_data = require('../../quiz_data.json')
+let quizData = require('../../quiz_data.json')
 let babylon = require('babylon')
 
 describe('Quiz Component', () => {
@@ -31,14 +31,14 @@ describe('Quiz Component', () => {
     }
 
     if (quiz.state().quiz_position) {
-      assert(quiz.state().quiz_position == quiz_data.quiz_position, "The Quiz component's state does not have a key named `quiz_position` with the correct value - are you sure you're still setting the component's state to `quiz_data`?")
+      assert(quiz.state().quiz_position == quizData.quiz_position, "The Quiz component's state does not have a key named `quiz_position` with the correct value - are you sure you're still setting the component's state to `quizData`?")
       try {
         quiz.instance().handleClick()
       } catch (e) {
         assert(false, "There's not a method named `handleClick()` in the Quiz class.")
       }
 
-      assert(quiz.state().quiz_position == quiz_data.quiz_position + 1, "The Quiz component state's `quiz_position` value is not being incremented by 1 when the `handleClick()` method is called.")
+      assert(quiz.state().quiz_position == quizData.quiz_position + 1, "The Quiz component state's `quiz_position` value is not being incremented by 1 when the `handleClick()` method is called.")
     }
   })
 })

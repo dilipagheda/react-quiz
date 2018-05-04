@@ -15,7 +15,7 @@ try {
 }
 
 let fs = require('fs');
-let quiz_data = require('../../quiz_data.json')
+let quizData = require('../../quiz_data.json')
 let babylon = require('babylon')
 
 describe('QuizQuestion Component', () => {
@@ -35,7 +35,7 @@ describe('QuizQuestion Component', () => {
       assert(false, "We weren't able to mount the QuizQuestion component")
     }
 
-    assert(quizQuestion.find('QuizQuestionButton').length == quiz_data.quiz_questions[0].answer_options.length, "The number of QuizQuestionButton components that are rendered by the QuizQuestion component don't match the number of `answer_options` in the JSON data")
+    assert(quizQuestion.find('QuizQuestionButton').length == quizData.quiz_questions[0].answer_options.length, "The number of QuizQuestionButton components that are rendered by the QuizQuestion component don't match the number of `answer_options` in the JSON data")
     
     assert(quizQuestion.find('QuizQuestionButton').first().props().clickHandler != null, "The QuizQuestionButton tag in QuizQuestion's JSX doesn't have a `clickHandler` property")
 

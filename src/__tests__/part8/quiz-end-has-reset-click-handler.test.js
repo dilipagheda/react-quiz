@@ -24,7 +24,7 @@ try {
 }
 
 let fs = require('fs');
-let quiz_data = require('../../quiz_data.json')
+let quizData = require('../../quiz_data.json')
 let babylon = require('babylon')
 
 describe('QuizEnd Component', () => {
@@ -40,7 +40,7 @@ describe('QuizEnd Component', () => {
       assert(false, "We weren't able to mount the Quiz component")
     }
 
-    quiz.setState({ quiz_position: quiz_data.quiz_questions.length + 1 })
+    quiz.setState({ quiz_position: quizData.quiz_questions.length + 1 })
     
     assert(quiz.instance().handleResetClick, "There doesn't appear to be a method named `handleResetClick()` in the Quiz component.")
 

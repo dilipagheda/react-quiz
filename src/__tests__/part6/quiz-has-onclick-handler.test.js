@@ -15,7 +15,6 @@ try {
 }
 
 let fs = require('fs');
-let quiz_data = require('../../quiz_data.json')
 let babylon = require('babylon')
 
 describe('Quiz Component', () => {

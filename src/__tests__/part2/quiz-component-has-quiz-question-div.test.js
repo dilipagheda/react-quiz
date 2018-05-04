@@ -14,7 +14,6 @@ try {
 }
 
 let fs = require('fs');
-let quiz_data = require('../../quiz_data.json')
 
 describe('Quiz Component', () => {
   it('renders a div with a className of `QuizQuestion`  @quiz-component-has-quiz-question-div', () => {

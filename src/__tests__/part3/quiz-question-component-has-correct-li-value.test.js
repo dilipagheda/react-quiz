@@ -23,7 +23,7 @@ try {
 }
 
 let fs = require('fs');
-let quiz_data = require('../../quiz_data.json')
+let quizData = require('../../quiz_data.json')
 
 describe('QuizQuestion Component', () => {
   it('has li tag with correct value @quiz-question-component-has-correct-li-value', () => {
@@ -52,7 +52,7 @@ describe('QuizQuestion Component', () => {
       // this runs after @quiz-question-component-displays-quiz-question-button-component
     } else {
       let li_contents = div.querySelectorAll('main section ul li')[0]
-      assert(li_contents.innerHTML == quiz_data.quiz_questions[0].answer_options[0], "You're not displaying the correct data from the `quiz_question` prop in the QuizQuestion component's JSX.")
+      assert(li_contents.innerHTML == quizData.quiz_questions[0].answer_options[0], "You're not displaying the correct data from the `quiz_question` prop in the QuizQuestion component's JSX.")
     }
   })
 })

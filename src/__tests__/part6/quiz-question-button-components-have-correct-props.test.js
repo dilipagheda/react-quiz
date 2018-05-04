@@ -23,7 +23,7 @@ try {
 }
 
 let fs = require('fs');
-let quiz_data = require('../../quiz_data.json')
+let quizData = require('../../quiz_data.json')
 
 describe('QuizQuestion Component', () => {
   it('has QuizQuestionButton components with correct props @quiz-question-button-component-has-correct-props', () => {
@@ -45,11 +45,11 @@ describe('QuizQuestion Component', () => {
 
     let expectedPropsFirst = {
       key: 0,
-      button_text: quiz_data.quiz_questions[0].answer_options[0]
+      button_text: quizData.quiz_questions[0].answer_options[0]
     }
     let expectedPropsLast = {
       key: 3,
-      button_text: quiz_data.quiz_questions[0].answer_options[quiz_data.quiz_questions[0].answer_options.length-1]
+      button_text: quizData.quiz_questions[0].answer_options[quizData.quiz_questions[0].answer_options.length-1]
     }
 
     if (quizQuestion.find('QuizQuestionButton').length == 1) {
@@ -59,7 +59,7 @@ describe('QuizQuestion Component', () => {
       // this will run after @quiz-question-component-maps-multiple-button-components
       quizQuestion.find('QuizQuestionButton').forEach((n, index) => {
         let expectedProps = {
-          button_text: quiz_data.quiz_questions[0].answer_options[index]
+          button_text: quizData.quiz_questions[0].answer_options[index]
         }
         assert(n.key() == index, "It doesn't look like the QuizQuestionButton component's `key` props have the correct values.")
         assert(JSON.stringify(n.props()) == JSON.stringify(expectedProps), "It doesn't look like the QuizQuestionButton component's `button_text` props have the correct values.")

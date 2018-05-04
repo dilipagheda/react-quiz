@@ -14,7 +14,6 @@ try {
 }
 
 let fs = require('fs');
-let quiz_data = require('../../quiz_data.json')
 
 describe('QuizQuestion Component', () => {
   it('constructor sets the state key `incorrectAnswer` to `false` @quiz-question-component-constructor-sets-state', () => {

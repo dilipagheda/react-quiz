@@ -15,7 +15,6 @@ try {
 }
 
 let fs = require('fs');
-let quiz_data = require('../../quiz_data.json')
 let babylon = require('babylon')
 
 describe('Quiz Component', () => {
@@ -32,7 +31,7 @@ describe('Quiz Component', () => {
 
     quiz.setState({ quiz_position: 3 })
 
-    assert(quiz.state().quiz_position == 3, "The Quiz component's state does not have a key named `quiz_position` with the correct value - are you sure you're still setting the component's state to `quiz_data`?")
+    assert(quiz.state().quiz_position == 3, "The Quiz component's state does not have a key named `quiz_position` with the correct value - are you sure you're still setting the component's state to `quizData`?")
 
     try {
       quiz.instance().handleResetClick()

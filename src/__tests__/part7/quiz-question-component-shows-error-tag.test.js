@@ -14,7 +14,6 @@ try {
 }
 
 let fs = require('fs');
-let quiz_data = require('../../quiz_data.json')
 
 describe('QuizQuestion Component', () => {
   it('shows error paragraph tag if incorrectAnswer is true @quiz-question-component-shows-error-tag', () => {

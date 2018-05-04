@@ -14,7 +14,7 @@ try {
 }
 
 let fs = require('fs');
-let quiz_data = require('../../quiz_data.json')
+let quizData = require('../../quiz_data.json')
 
 describe('Quiz Component', () => {
   it('has a render method that returns a single div with the text `Quiz`  @quiz-component-has-render-method', () => {
@@ -33,7 +33,7 @@ describe('Quiz Component', () => {
       let el = quiz.find('.QuizQuestion').getElements()[0];
       if (el.props.className == 'QuizQuestion') {
         if (el.props.children == null) {
-          assert(el.props.children == quiz_data.quiz_questions[0].instruction_text)
+          assert(el.props.children == quizData.quiz_questions[0].instruction_text)
         }
       }
     }  else if (quiz.find('QuizQuestion')) {
