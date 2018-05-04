@@ -45,7 +45,7 @@ describe('QuizQuestionButton Component', () => {
       assert(false, "The QuizQuestionButton.js file hasn't been created yet.")
     }
 
-    let re = /\nexport default QuizQuestionButton\s*$/g
+    let re = /\nexport default QuizQuestionButton\;*\s*$/g
     let match = file.match(re)
     assert(match != null && match.length > 0, "We couldn't find `export default QuizQuestionButton` at the end of your QuizQuestionButton.js file")
   })
