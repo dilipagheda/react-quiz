@@ -47,6 +47,8 @@ describe('QuizQuestion Component', () => {
     }
     if (quizQuestion.find('QuizQuestionButton').length == 1) {
       assert(JSON.stringify(quizQuestion.find('QuizQuestionButton').props()) == JSON.stringify(expectedProps), "You're not passing the correct prop values to QuizQuestionButton.")
+    } else if (quizQuestion.find('QuizQuestionButton').length == 4) {
+      
     } else {
       assert(false, "We don't see the QuizQuestionButton element in the QuizQuestion component's JSX.")
     }

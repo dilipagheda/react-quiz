@@ -19,7 +19,7 @@ let quizData = require('../../quiz_data.json')
 let babylon = require('babylon')
 
 describe('Quiz Component', () => {
-  it('handleClick() method increments the quiz_position by 1 @quiz-handle-click-increments-position-state', () => {
+  it('showNextQuestion() method increments the quiz_position by 1 @quiz-show-next-question-increments-position-state', () => {
     assert(quizComponentExists, "The Quiz component hasn't been created yet.")
 
     let quiz;
@@ -31,14 +31,14 @@ describe('Quiz Component', () => {
     }
 
     if (quiz.state().quiz_position) {
-      assert(quiz.state().quiz_position == quizData.quiz_position, "The Quiz component's state does not have a key named `quiz_position` with the correct value - are you sure you're still setting the component's state to `quizData`?")
+      assert(quiz.state().quiz_position == 1, "The Quiz component's state does not have a key named `quiz_position` with the correct value - are you sure you're still setting the component's state to `quizData`?")
+      let prev_position = quiz.state().quiz_position
       try {
-        quiz.instance().handleClick()
+        quiz.instance().showNextQuestion()
       } catch (e) {
-        assert(false, "There's not a method named `handleClick()` in the Quiz class.")
+        assert(false, "There's not a method named `showNextQuestion()` in the Quiz class.")
       }
-
-      assert(quiz.state().quiz_position == quizData.quiz_position + 1, "The Quiz component state's `quiz_position` value is not being incremented by 1 when the `handleClick()` method is called.")
+      assert(quiz.state().quiz_position == prev_position + 1, "The Quiz component state's `quiz_position` value is not being incremented by 1 when the `showNextQuestion()` method is called.")
     }
   })
 })

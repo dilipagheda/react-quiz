@@ -36,10 +36,10 @@ describe('Quiz Component', () => {
                         is_quiz_end_count = is_quiz_end_count + 1
                         if (el3.init.type == 'BinaryExpression') {
                           let statement = file.substring(el3.init.start-20, el3.init.end)
-                          let re = /isQuizEnd\s*=\s*\(?\s*this\.state\.quiz_position\s*-\s*1\s*===?\s*this\.state\.quiz_questions\.length\)?/g
+                          let re = /isQuizEnd\s*=\s*\(?\s*\(?\s*this\.state\.quiz_position\s*-\s*1\s*\)?\s*===?\s*quizData\.quiz_questions\.length\)?/g
                           let match = statement.match(re)
-                          assert(match != null, "We can't find where you're writing an expression that checks if `this.state.quiz_position - 1` is equivalent to `this.state.quiz_questions.length`")
-                          assert(match.length == 1, "We can't find where you're writing an expression that checks if `this.state.quiz_position - 1` is equivalent to `this.state.quiz_questions.length`")
+                          assert(match != null, "We can't find where you're writing an expression that checks if `this.state.quiz_position - 1` is equivalent to `quizData.quiz_questions.length`")
+                          assert(match.length == 1, "We can't find where you're writing an expression that checks if `this.state.quiz_position - 1` is equivalent to `quizData.quiz_questions.length`")
                         }
                       }
                     })

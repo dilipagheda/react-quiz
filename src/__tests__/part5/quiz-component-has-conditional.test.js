@@ -14,6 +14,7 @@ try {
 }
 
 let fs = require('fs');
+let quizData = require('../../quiz_data.json')
 let babylon = require("babylon");
 
 describe('Quiz Component', () => {
@@ -30,7 +31,7 @@ describe('Quiz Component', () => {
 
     if (yallReadyForThis()) {
       assert(quiz.find('QuizQuestion').length == 1 && quiz.find('QuizEnd').length == 0, "QuizQuestion should be displaying when isQuizEnd is false")
-      quiz.setState({quiz_position: quiz.state().quiz_questions.length+1 })
+      quiz.setState({quiz_position: quizData.quiz_questions.length+1 })
       assert(quiz.find('QuizQuestion').length == 0 && quiz.find('QuizEnd').length == 1, "QuizEnd should be displaying when isQuizEnd is true")      
     } else {
       assert(false, "We couldn't find a const named `isQuizEnd`.")

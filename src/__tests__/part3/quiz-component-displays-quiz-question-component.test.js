@@ -26,8 +26,8 @@ let fs = require('fs');
 
 describe('Quiz Component', () => {
   it('displays the QuizQuestion component @quiz-component-displays-quiz-question-component', () => {
-    assert(quizQuestionComponentExists, "The Quiz component hasn't been created yet.")
-    assert(quizComponentExists, "The QuizQuestion component hasn't been created yet.")
+    assert(quizQuestionComponentExists, "The QuizQuestion component hasn't been created yet.")
+    assert(quizComponentExists, "The Quiz component hasn't been created yet.")
 
     let quiz;
     try {
