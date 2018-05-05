@@ -14,6 +14,7 @@ try {
 }
 
 let fs = require('fs');
+let quizData = require('../../quiz_data.json')
 
 describe('Quiz Component', () => {
   it('renders a div with a className of `QuizQuestion`  @quiz-component-has-quiz-question-div', () => {
@@ -23,25 +24,25 @@ describe('Quiz Component', () => {
     try {
       quiz = shallow(<Quiz />)
     } catch (e) {
-      assert(false, "We weren't able to mount the Quiz component")      
+      assert(false, "We weren't able to mount the Quiz component.")      
     }
     
     if (quiz.containsMatchingElement(<div className="QuizQuestion"></div>)) {
       // this block will run after @quiz-component-has-quiz-question-div
-      assert(quiz.containsMatchingElement(<div className="QuizQuestion"></div>), "The Quiz component isn't rendering a single div with the class `QuizQuestion`")
+      assert(quiz.containsMatchingElement(<div className="QuizQuestion"></div>), "The Quiz component isn't rendering a single div with the class `QuizQuestion`.")
     } else if ( quiz.find('.QuizQuestion').getElements().length == 1) {
       let el = quiz.find('.QuizQuestion').getElements()[0];
       if (el.props.className == 'QuizQuestion') {
         if (el.props.children == null) {
-          assert(el.props.children == 'How many continents are there on Planet Earth?')
+          assert(el.props.children == quizData.quiz_questions[0].instruction_text)
         }
       }
     } else if (quiz.find('QuizQuestion')) {
     } else if (quiz.containsMatchingElement(<div>Quiz</div>)) {
       // this block will run until @quiz-component-has-quiz-question-div
-      assert(false, "The Quiz component isn't rendering a single div with the class `QuizQuestion`")
+      assert(false, "The Quiz component isn't rendering a single div with the class `QuizQuestion`.")
     } else {
-      assert(false, "The Quiz component isn't rendering a single div with the class `QuizQuestion`")
+      assert(false, "The Quiz component isn't rendering a single div with the class `QuizQuestion`.")
     }
 
   })
