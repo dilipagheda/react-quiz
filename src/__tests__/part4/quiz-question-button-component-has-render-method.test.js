@@ -25,15 +25,15 @@ describe('QuizQuestionButton Component', () => {
     try {
       quizQuestionButton = shallow(<QuizQuestionButton button_text={mock_prop.button_text} />)
     } catch (e) {
-      assert(false, "We weren't able to mount the QuizQuestionButton component")
+      assert(false, "We weren't able to mount the QuizQuestionButton component.")
     }
 
     let html = quizQuestionButton.html()
     let div = document.createElement('div')
     div.innerHTML = html
 
-    assert(div.querySelector('li') != null, "no li")
-    assert(div.querySelectorAll('li button') != null, "no li -> button")
-    assert(div.querySelectorAll('li button').length == 1, "not a single button")
+    assert(div.querySelector('li') != null, "We can't find an `li` tag in the QuizQuestionButton component's JSX.")
+    assert(div.querySelectorAll('li button') != null, "We can't find a `button` tag that's a child of an `li` tag in the QuizQuestionButton component's JSX.")
+    assert(div.querySelectorAll('li button').length == 1, "We found more than one `button` tag that's a child of an `li` tag in the QuizQuestionButton component's JSX, but we'd like for there to be exactly one.")
   })
 })

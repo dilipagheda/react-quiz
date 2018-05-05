@@ -23,18 +23,18 @@ describe('QuizEnd Component', () => {
     try {
       quizEnd = shallow(<QuizEnd />)
     } catch (e) {
-      assert(false, "We weren't able to mount the QuizEnd component")
+      assert(false, "We weren't able to mount the QuizEnd component.")
     }
 
     let html = quizEnd.html()
     let div = document.createElement('div')
     div.innerHTML = html
 
-    assert(div.querySelector('div') != null, "no div")
-    assert(div.querySelector('div p') != null, "no div -> p")
-    assert(div.querySelector('div a') != null, "no div -> a")
-    assert(div.querySelector('div p').innerHTML == "Thanks for playing!", "incorrect p text")
-    assert(div.querySelector('div a').innerHTML == "Reset Quiz", "incorrect a text")
-    assert(div.querySelector('div a').getAttribute('href') == '', "incorrect href")
+    assert(div.querySelector('div') != null, "We can't find a `div` tag in the QuizEnd component's JSX.")
+    assert(div.querySelector('div p') != null, "We can't find a `p` tag that's a child of a `div` tag in the QuizEnd component's JSX.")
+    assert(div.querySelector('div a') != null, "We can't find an `a` tag that's a child of a `div` tag in the QuizEnd component's JSX.")
+    assert(div.querySelector('div p').innerHTML == "Thanks for playing!", "We found a paragraph tag in the QuizEnd component's JSX, but it has the incorrect text value.")
+    assert(div.querySelector('div a').innerHTML == "Reset Quiz", "We found an anchor tag in the QuizEnd component's JSX, but it has the incorrect text value.")
+    assert(div.querySelector('div a').getAttribute('href') == '', "We found a anchor tag in the QuizEnd component's JSX, but it has the incorrect value for the `href` attribute.")
   })
 })

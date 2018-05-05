@@ -39,14 +39,14 @@ describe('QuizQuestion Component', () => {
     try {
       quizQuestion = shallow(<QuizQuestion quiz_question={mock_prop} />)
     } catch (e) {
-      assert(false, "We weren't able to mount the QuizQuestion component")
+      assert(false, "We weren't able to mount the QuizQuestion component.")
     }
 
     let html = quizQuestion.html()
     let div = document.createElement('div')
     div.innerHTML = html
 
-    assert(div.querySelector('main') != null, "no main")
+    assert(div.querySelector('main') != null, "We can't find a `main` tag in the QuizQuestion component's JSX.")
     assert(div.querySelectorAll('main section ul li').length != 0, "We can't find an `li` tag inside of the `ul` tag in the QuizQuestion component's JSX.")
     if (div.querySelectorAll('main section ul li button') != null) {
       // this runs after @quiz-question-component-displays-quiz-question-button-component

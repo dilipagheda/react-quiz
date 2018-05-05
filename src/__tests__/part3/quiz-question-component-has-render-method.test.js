@@ -27,18 +27,18 @@ describe('QuizQuestion Component', () => {
     try {
       quiz = shallow(<QuizQuestion quiz_question={mock_prop} />)
     } catch (e) {
-      assert(false, "We weren't able to mount the QuizQuestion component")
+      assert(false, "We weren't able to mount the QuizQuestion component.")
     }
 
     let html = quiz.html()
     let div = document.createElement('div')
     div.innerHTML = html
 
-    assert(div.querySelector('main') != null, "no main")
-    assert(div.querySelectorAll('main section') != null, "no main -> section")
-    assert(div.querySelectorAll('main section').length == 2, "not two sections")
+    assert(div.querySelector('main') != null, "We can't find a `main` tag in the QuizQuestion component's JSX.")
+    assert(div.querySelectorAll('main section') != null, "We can't find a `main` tag with a child of `section` in the QuizQuestion component's JSX.")
+    assert(div.querySelectorAll('main section').length == 2, "We're finding some `section` tags that are children of a `main` tag, but we'd like there to be exactly *2* `section` tags - if you're having trouble, just copy the HTML that we've provided in the task instructions.")
     // console.log(div.querySelector('main section'))
-    assert(div.querySelectorAll('main section')[0].querySelector('p'), "no paragraph in first section")
-    assert(div.querySelectorAll('main section')[1].querySelector('ul'), "no unordered list in first section")
+    assert(div.querySelectorAll('main section')[0].querySelector('p'), "We can't find a `section` tag with a child of `p` in the QuizQuestion component's JSX.")
+    assert(div.querySelectorAll('main section')[1].querySelector('ul'), "We can't find a `ul` tag with a child of `li` in the QuizQuestion component's JSX.")
   })
 })
