@@ -34,10 +34,10 @@ describe('Quiz Component', () => {
     try {
       quiz = shallow(<Quiz />)
     } catch (e) {
-      assert(false, "We weren't able to mount the Quiz component")
+      assert(false, "We weren't able to mount the Quiz component.")
     }
 
-    assert(quiz.find('QuizQuestion').length == 1, "We couldn't find the QuizQuestion component being loaded by the Quiz component")
+    assert(quiz.find('QuizQuestion').length == 1, "We couldn't find the QuizQuestion component being loaded by the Quiz component.")
     assert(quiz.find('QuizQuestion').props().quiz_question != null, "The QuizQuestion component exists, but there's no prop named `quiz_question`.")
     assert(quiz.find('QuizQuestion').props().quiz_question == quizData.quiz_questions[0], "The QuizQuestion component has a prop named `quiz_question`, but it doesn't contain the correct value.")
   })

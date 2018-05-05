@@ -24,7 +24,7 @@ describe('Quiz Component', () => {
     try {
       quiz = shallow(<Quiz />)
     } catch (e) {
-      assert(false, "We weren't able to mount the Quiz component")      
+      assert(false, "We weren't able to mount the Quiz component.")      
     }
 
     if (quiz.containsMatchingElement(<div className="QuizQuestion"></div>)) {
@@ -40,7 +40,7 @@ describe('Quiz Component', () => {
       // this block will run after @quiz-component-displays-quiz-question-component
     } else {
       // this block will run until @quiz-component-has-quiz-question-div
-      assert(quiz.containsMatchingElement(<div>Quiz</div>), "The Quiz component isn't rendering a single div with the text `Quiz`")
+      assert(quiz.containsMatchingElement(<div>Quiz</div>), "The Quiz component isn't rendering a single div with the text `Quiz`.")
     }
   })
 })

@@ -17,7 +17,7 @@ describe('Quiz Component', () => {
     }
 
     let ast = babylon.parse(file, { sourceType: "module", plugins: ["jsx"] })
-    assert(ast.program.body, "We can't find any code in the Quiz.js file")
+    assert(ast.program.body, "We can't find any code in the Quiz.js file.")
 
     let quiz_data_loaded_correctly = false;
 

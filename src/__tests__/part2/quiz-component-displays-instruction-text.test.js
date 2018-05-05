@@ -24,7 +24,7 @@ describe('Quiz Component', () => {
     try {
       quiz = shallow(<Quiz />)
     } catch (e) {
-      assert(false, "We weren't able to mount the Quiz component")      
+      assert(false, "We weren't able to mount the Quiz component.")      
     }
 
     if (quiz.find('.QuizQuestion').length > 0) {

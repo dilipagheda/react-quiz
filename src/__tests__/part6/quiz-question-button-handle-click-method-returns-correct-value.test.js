@@ -31,11 +31,11 @@ describe('QuizQuestionButton Component', () => {
     try {
       quizQuestionButton = shallow(<QuizQuestionButton button_text='5' clickHandler={mockedPropHandler} />)
     } catch (e) {
-      assert(false, "We weren't able to mount the QuizQuestionButton component")
+      assert(false, "We weren't able to mount the QuizQuestionButton component.")
     }
 
     quizQuestionButton.find('button').simulate('click')
-    assert(spy.calledOnce, "There's not a method named `handleClick()` that's being called on button click in the QuizQuestionButton class")
+    assert(spy.calledOnce, "There's not a method named `handleClick()` that's being called on button click in the QuizQuestionButton class.")
     assert(mockedPropHandler.calledOnce, "`this.props.clickHandler()` is not being called from the QuizQuestionButton component's `handleClick()` method.")
     assert(mockedPropHandler.args[0][0] != null && mockedPropHandler.args[0][0] == '5', "The correct `button_text` prop value was not passed to the `clickHandler` callback in QuizQuestionButton.")
   })

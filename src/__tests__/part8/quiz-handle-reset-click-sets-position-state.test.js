@@ -26,7 +26,7 @@ describe('Quiz Component', () => {
     try {
       quiz = shallow(<Quiz />)
     } catch (e) {
-      assert(false, "We weren't able to mount the Quiz component")
+      assert(false, "We weren't able to mount the Quiz component.")
     }
 
     quiz.setState({ quiz_position: 3 })

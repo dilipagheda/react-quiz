@@ -47,6 +47,6 @@ describe('QuizQuestion Component', () => {
 
     let re = /\nexport default QuizQuestion\;*\s*$/g
     let match = file.match(re)
-    assert(match != null && match.length > 0, "We couldn't find `export default QuizQuestion` at the end of your QuizQuestion.js file")
+    assert(match != null && match.length > 0, "We couldn't find `export default QuizQuestion` at the end of your QuizQuestion.js file.")
   })
 })

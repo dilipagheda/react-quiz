@@ -32,8 +32,8 @@ describe('QuizEnd Component', () => {
         })
       }
     })
-    assert(react_class_import_found, "You're not importing the React class")
-    assert(component_class_import_found, "You're not importing the Component class")
+    assert(react_class_import_found, "You're not importing the React class.")
+    assert(component_class_import_found, "You're not importing the Component class.")
   });
 
 })

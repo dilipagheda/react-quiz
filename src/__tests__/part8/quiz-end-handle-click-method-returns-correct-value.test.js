@@ -33,7 +33,7 @@ describe('QuizEnd Component', () => {
       quiz = shallow(<Quiz />)
     } catch (e) {
       console.log(e)
-      assert(false, "We weren't able to mount the Quiz component")
+      assert(false, "We weren't able to mount the Quiz component.")
     }
 
     let quiz_spy
@@ -62,7 +62,7 @@ describe('QuizEnd Component', () => {
     try {
       quizEnd = shallow(<QuizEnd resetClickHandler={mockedPropHandler} />)
     } catch (e) {
-      assert(false, "We weren't able to mount the QuizEnd component")
+      assert(false, "We weren't able to mount the QuizEnd component.")
     }
 
     quizEnd.find('a').simulate('click')

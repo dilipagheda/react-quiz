@@ -26,13 +26,13 @@ describe('Quiz Component', () => {
     try {
       quiz = shallow(<Quiz />)
     } catch (e) {
-      assert(false, "We weren't able to mount the Quiz component")
+      assert(false, "We weren't able to mount the Quiz component.")
     }
 
     if (yallReadyForThis()) {
-      assert(quiz.find('QuizQuestion').length == 1 && quiz.find('QuizEnd').length == 0, "QuizQuestion should be displaying when isQuizEnd is false")
+      assert(quiz.find('QuizQuestion').length == 1 && quiz.find('QuizEnd').length == 0, "QuizQuestion should be displaying when isQuizEnd is false.")
       quiz.setState({quiz_position: quizData.quiz_questions.length+1 })
-      assert(quiz.find('QuizQuestion').length == 0 && quiz.find('QuizEnd').length == 1, "QuizEnd should be displaying when isQuizEnd is true")      
+      assert(quiz.find('QuizQuestion').length == 0 && quiz.find('QuizEnd').length == 1, "QuizEnd should be displaying when isQuizEnd is true.")      
     } else {
       assert(false, "We couldn't find a const named `isQuizEnd`.")
     }

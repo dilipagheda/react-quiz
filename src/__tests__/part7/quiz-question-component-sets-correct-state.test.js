@@ -64,7 +64,7 @@ describe('QuizQuestion Component', () => {
     try {
       quizQuestion = shallow(<QuizQuestion quiz_question={mock_prop} showNextQuestionHandler={spy2} />)
     } catch (e) {
-      assert(false, "We weren't able to mount the QuizQuestion component")
+      assert(false, "We weren't able to mount the QuizQuestion component.")
     }
 
     let expectedStateBefore = {

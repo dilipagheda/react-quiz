@@ -35,13 +35,13 @@ describe('Quiz Component', () => {
     try {
       quiz = shallow(<Quiz />)
     } catch (e) {
-      assert(false, "We weren't able to mount the Quiz component")
+      assert(false, "We weren't able to mount the Quiz component.")
     }
 
     if (yallReadyForThis()) {
       // we good
     } else {
-      assert(quiz.find('QuizEnd').length == 1, "We couldn't find the QuizEnd component being loaded by the Quiz component")
+      assert(quiz.find('QuizEnd').length == 1, "We couldn't find the QuizEnd component being loaded by the Quiz component.")
     }
   })
 })
