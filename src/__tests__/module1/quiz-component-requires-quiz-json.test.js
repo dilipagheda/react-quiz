@@ -8,7 +8,7 @@ let fs = require('fs');
 let babylon = require('babylon')
 
 describe('Quiz Component', () => {
-  it('requires quiz_data.json @quiz-component-imports-css', () => {
+  it('requires quiz_data.json @quiz-component-requires-quiz-json', () => {
     let file;
     try {
       file = fs.readFileSync(__dirname + '/../../Quiz.js').toString();
