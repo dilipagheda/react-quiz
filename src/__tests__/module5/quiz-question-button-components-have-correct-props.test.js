@@ -26,7 +26,7 @@ let fs = require('fs');
 let quizData = require('../../quiz_data.json')
 
 describe('QuizQuestion Component', () => {
-  it('has QuizQuestionButton components with correct props @quiz-question-button-component-has-correct-props', () => {
+  it('has QuizQuestionButton components with correct props @quiz-question-button-components-have-correct-props', () => {
     assert(quizQuestionComponentExists, "The QuizQuestion component hasn't been created yet.")
     assert(quizQuestionButtonComponentExists, "The QuizQuestionButton component hasn't been created yet.")
 

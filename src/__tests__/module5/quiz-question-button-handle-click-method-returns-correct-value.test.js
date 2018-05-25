@@ -15,7 +15,7 @@ try {
 }
 
 describe('QuizQuestionButton Component', () => {
-  it('has a button with an onClick handler @quiz-question-button-has-onclick-handler', () => {
+  it('has a button with an onClick handler @quiz-question-button-handle-click-method-returns-correct-value', () => {
     assert(quizQuestionButtonComponentExists, "The QuizQuestionButton component hasn't been created yet.")
 
     let spy
