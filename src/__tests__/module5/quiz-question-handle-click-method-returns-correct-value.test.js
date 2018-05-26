@@ -33,7 +33,7 @@ try {
 }
 
 describe('QuizQuestion Component', () => {
-  it('handleClick method has conditional that checks arugment and called clickHandler @quiz-question-handle-click-method-returns-correct-value', () => {
+  it('handleClick method has conditional that checks argument and called clickHandler @quiz-question-handle-click-method-returns-correct-value', () => {
     assert(quizComponentExists, "The Quiz component hasn't been created yet.")
     assert(quizQuestionComponentExists, "The QuizQuestion component hasn't been created yet.")
     assert(quizQuestionButtonComponentExists, "The QuizQuestionButton component hasn't been created yet.")
