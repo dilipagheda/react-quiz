@@ -13,6 +13,15 @@ try {
   quizComponentExists = false;
 }
 
+let quizQuestionComponentExists = false;
+let QuizQuestion;
+try {
+  QuizQuestion = require('../../QuizQuestion.js').default;
+  quizQuestionComponentExists = true;
+} catch (e) {
+  quizQuestionComponentExists = false;
+}
+
 let fs = require('fs');
 let quizData = require('../../quiz_data.json')
 
@@ -35,6 +44,10 @@ describe('Quiz Component', () => {
         if (el.props.children == null) {
           assert(el.props.children == quizData.quiz_questions[0].instruction_text)
         }
+      }
+    } else if (quizQuestionComponentExists) {
+      if (quiz.containsMatchingElement(<QuizQuestion />)) {
+        // this block will run after @quiz-question-component-has-render-method in module 2
       }
     } else {
       // this block will run until @quiz-component-has-quiz-question-div
