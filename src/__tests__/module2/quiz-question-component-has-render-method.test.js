@@ -37,7 +37,6 @@ describe('QuizQuestion Component', () => {
     assert(div.querySelector('main') != null, "We can't find a `main` tag in the QuizQuestion component's JSX.")
     assert(div.querySelectorAll('main section') != null, "We can't find a `main` tag with a child of `section` in the QuizQuestion component's JSX.")
     assert(div.querySelectorAll('main section').length == 2, "We're finding some `section` tags that are children of a `main` tag, but we'd like there to be exactly *2* `section` tags - if you're having trouble, just copy the HTML that we've provided in the task instructions.")
-    // console.log(div.querySelector('main section'))
     assert(div.querySelectorAll('main section')[0].querySelector('p'), "We can't find a `section` tag with a child of `p` in the QuizQuestion component's JSX.")
     assert(div.querySelectorAll('main section')[1].querySelector('ul'), "We can't find a `ul` tag with a child of `li` in the QuizQuestion component's JSX.")
   })

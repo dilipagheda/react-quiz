@@ -42,7 +42,6 @@ describe('QuizQuestion Component', () => {
     try {
       quiz = shallow(<Quiz />)
     } catch (e) {
-      console.log(e)
       assert(false, "We weren't able to mount the Quiz component.")
     }
 
