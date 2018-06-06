@@ -1,6 +1,6 @@
 {
   "name": "build-a-quiz-component-with-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "react": "16.2.0",
@@ -10,14 +10,14 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "CI=true ./node_modules/.bin/cross-env react-scripts test --env=jsdom --noStackTrace || true",
-    "test:module1": "CI=true ./node_modules/.bin/cross-env react-scripts test --env=jsdom --noStackTrace src/__tests__/module1 || true",
-    "test:module2": "CI=true ./node_modules/.bin/cross-env react-scripts test --env=jsdom --noStackTrace src/__tests__/module2 || true",
-    "test:module3": "CI=true ./node_modules/.bin/cross-env react-scripts test --env=jsdom --noStackTrace src/__tests__/module3 || true",
-    "test:module4": "CI=true ./node_modules/.bin/cross-env react-scripts test --env=jsdom --noStackTrace src/__tests__/module4 || true",
-    "test:module5": "CI=true ./node_modules/.bin/cross-env react-scripts test --env=jsdom --noStackTrace src/__tests__/module5 || true",
-    "test:module6": "CI=true ./node_modules/.bin/cross-env react-scripts test --env=jsdom --noStackTrace src/__tests__/module6 || true",
-    "test:module7": "CI=true ./node_modules/.bin/cross-env react-scripts test --env=jsdom --noStackTrace src/__tests__/module7 || true",
+    "test": "./node_modules/.bin/cross-env CI=true react-scripts test --env=jsdom --noStackTrace || true",
+    "test:module1": "./node_modules/.bin/cross-env CI=true react-scripts test --env=jsdom --noStackTrace src/__tests__/module1 || true",
+    "test:module2": "./node_modules/.bin/cross-env CI=true react-scripts test --env=jsdom --noStackTrace src/__tests__/module2 || true",
+    "test:module3": "./node_modules/.bin/cross-env CI=true react-scripts test --env=jsdom --noStackTrace src/__tests__/module3 || true",
+    "test:module4": "./node_modules/.bin/cross-env CI=true react-scripts test --env=jsdom --noStackTrace src/__tests__/module4 || true",
+    "test:module5": "./node_modules/.bin/cross-env CI=true react-scripts test --env=jsdom --noStackTrace src/__tests__/module5 || true",
+    "test:module6": "./node_modules/.bin/cross-env CI=true react-scripts test --env=jsdom --noStackTrace src/__tests__/module6 || true",
+    "test:module7": "./node_modules/.bin/cross-env CI=true react-scripts test --env=jsdom --noStackTrace src/__tests__/module7 || true",
     "eject": "react-scripts eject"
   },
   "jest": {
