@@ -26,7 +26,7 @@ let fs = require('fs');
 let quizData = require('../../quiz_data.json')
 
 describe('Quiz Component', () => {
-  it('has QuizQuestion component with correct prop @@quiz-question-component-has-quiz-question-prop', () => {
+  it('has QuizQuestion component with correct prop @quiz-question-component-has-quiz-question-prop', () => {
     assert(quizQuestionComponentExists, "The QuizQuestion component hasn't been created yet.")
     assert(quizComponentExists, "The Quiz component hasn't been created yet.")
 
