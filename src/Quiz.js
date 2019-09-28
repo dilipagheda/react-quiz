@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 
 import QuizQuestion from './QuizQuestion'
+import QuizEnd from './QuizEnd'
+
 let quizData = require('./quiz_data.json')
 
 class Quiz extends Component
 {
+
     constructor(props)
     {
         super(props);
@@ -14,11 +17,12 @@ class Quiz extends Component
     render()
     {
 
-
+        const isQuizEnd = this.state.quiz_position-1 === quizData.quiz_questions.length;
         return (
             <div>
-                <QuizQuestion className='QuizQuestion' quiz_question={quizData.quiz_questions[this.state.quiz_position-1]}>
-                </QuizQuestion>
+                {isQuizEnd? <QuizEnd /> : 
+                    <QuizQuestion className='QuizQuestion' quiz_question={quizData.quiz_questions[this.state.quiz_position-1]} />
+                }
             </div>
         );
     }
