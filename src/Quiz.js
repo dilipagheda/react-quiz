@@ -7,6 +7,16 @@ let quizData = require('./quiz_data.json')
 
 class Quiz extends Component
 {
+    showNextQuestion()
+    {
+        this.setState(
+            (state,props)=>{
+                return {
+                    quiz_position: state.quiz_position+1
+                };
+            }
+        )
+    }
 
     constructor(props)
     {
@@ -21,7 +31,9 @@ class Quiz extends Component
         return (
             <div>
                 {isQuizEnd? <QuizEnd /> : 
-                    <QuizQuestion className='QuizQuestion' quiz_question={quizData.quiz_questions[this.state.quiz_position-1]} />
+                    <QuizQuestion showNextQuestionHandler={this.showNextQuestion.bind(this)} 
+                            className='QuizQuestion' 
+                            quiz_question={quizData.quiz_questions[this.state.quiz_position-1]} />
                 }
             </div>
         );
